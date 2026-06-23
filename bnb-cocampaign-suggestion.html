@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BD Suggestion — Activate BNB Chain as Co-Campaign Partner</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  :root {
+    --bg:#0a0a14;--bg2:#111120;--bg3:#16162a;
+    --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.15);
+    --purple:#7c4dff;--purple3:#c4aaff;--pbg:rgba(124,77,255,0.13);
+    --gold:#ffc233;--gold-bg:rgba(255,194,51,0.12);
+    --green:#22d3a8;--green-bg:rgba(34,211,168,0.1);
+    --text:#f3f1ff;--text2:#a8a3cc;--text3:#6e6892;
+    --bnb:#f0b90b;--bnb-bg:rgba(240,185,11,0.1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.6;padding-bottom:4rem}
+
+  .top-bar{background:linear-gradient(90deg,#1a1430,#201840);border-bottom:1px solid rgba(255,194,51,0.2);padding:9px 2rem;font-size:12px;color:var(--gold);display:flex;align-items:center;gap:8px}
+  .top-bar b{color:var(--text);font-weight:500}
+
+  .page-header{max-width:820px;margin:0 auto;padding:52px 2rem 0}
+  .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:600;color:var(--purple3);background:var(--pbg);border:0.5px solid rgba(124,77,255,0.3);padding:5px 13px;border-radius:20px;margin-bottom:1.25rem;text-transform:uppercase;letter-spacing:.06em}
+  .page-title{font-size:34px;font-weight:800;line-height:1.2;letter-spacing:-.02em;margin-bottom:.85rem}
+  .page-title .ac{color:var(--gold)}
+  .page-lead{font-size:15px;color:var(--text2);max-width:600px;line-height:1.75;margin-bottom:2.5rem}
+
+  .content{max-width:820px;margin:0 auto;padding:0 2rem}
+
+  .slabel{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--purple3);margin-bottom:.9rem;display:flex;align-items:center;gap:8px}
+  .slabel::after{content:'';flex:1;height:0.5px;background:var(--border)}
+
+  /* EVIDENCE SECTION — tweet screenshots with callout */
+  .evidence-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:1.75rem}
+  .evidence-single{margin-bottom:1.75rem}
+  .tweet-frame{background:#15202b;border:0.5px solid rgba(255,255,255,0.1);border-radius:16px;overflow:hidden}
+  .tweet-img{width:100%;display:block}
+  .tweet-caption{padding:.9rem 1.1rem;border-top:0.5px solid rgba(255,255,255,0.07)}
+  .tc-label{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:4px}
+  .tc-label.bnb{color:var(--bnb)}
+  .tc-label.walletv{color:var(--purple3)}
+  .tc-text{font-size:12px;color:var(--text2);line-height:1.55}
+  .tc-text strong{color:var(--text);font-weight:500}
+  .tc-link{display:inline-block;margin-top:8px;font-size:11px;color:var(--purple3);text-decoration:none;border:0.5px solid rgba(124,77,255,0.3);padding:3px 10px;border-radius:20px;transition:background .15s}
+  .tc-link:hover{background:var(--pbg)}
+
+  /* INSIGHT BOX */
+  .insight{background:var(--pbg);border:0.5px solid rgba(124,77,255,0.22);border-radius:14px;padding:1.25rem 1.6rem;margin-bottom:1.75rem}
+  .insight p{font-size:14px;color:var(--text2);line-height:1.75}
+  .insight p strong{color:var(--text);font-weight:600}
+
+  /* GAP CALLOUT */
+  .gap-box{background:rgba(239,68,68,0.08);border:0.5px solid rgba(239,68,68,0.25);border-radius:14px;padding:1.25rem 1.6rem;margin-bottom:1.75rem;display:flex;gap:12px;align-items:flex-start}
+  .gap-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+  .gap-text{font-size:13.5px;color:#fca5a5;line-height:1.7}
+  .gap-text strong{color:#fecaca;font-weight:600}
+
+  /* PROPOSAL */
+  .proposal-box{background:linear-gradient(135deg,#131028,#1c1640);border:1px solid rgba(255,194,51,0.3);border-radius:16px;padding:1.75rem 2rem;margin-bottom:1.75rem}
+  .pb-title{font-size:16px;font-weight:700;color:var(--gold);margin-bottom:1.1rem;display:flex;align-items:center;gap:8px}
+  .mechanic-steps{display:flex;flex-direction:column;gap:8px}
+  .ms{display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,0.04);border-radius:10px;padding:.85rem 1.1rem}
+  .ms-num{width:24px;height:24px;border-radius:7px;background:var(--gold);color:#0a0a14;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+  .ms-text{font-size:13px;color:var(--text2);line-height:1.6}
+  .ms-text strong{color:var(--text);font-weight:500}
+
+  /* WIN-WIN GRID */
+  .win-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1.75rem}
+  .win-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:12px;padding:1rem 1.1rem;text-align:center}
+  .win-logo{font-size:22px;margin-bottom:6px}
+  .win-name{font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
+  .win-benefit{font-size:12px;color:var(--text2);line-height:1.5}
+  .win-benefit strong{color:var(--text);font-weight:500}
+
+  /* BOTTOM NOTE */
+  .bottom-note{background:var(--bg3);border:0.5px solid var(--border);border-radius:12px;padding:1.1rem 1.5rem;font-size:13px;color:var(--text2);line-height:1.65}
+  .bottom-note strong{color:var(--text);font-weight:500}
+
+  @media(max-width:640px){
+    .evidence-pair{grid-template-columns:1fr}
+    .win-grid{grid-template-columns:1fr}
+    .page-header,.content{padding-left:1.25rem;padding-right:1.25rem}
+    .page-title{font-size:26px}
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar">💡 <b>BD Suggestion —</b> Activate BNB Chain as a Co-Campaign Partner · Summer Lyu</div>
+
+<div class="page-header">
+  <div class="eyebrow">Growth opportunity</div>
+  <div class="page-title">BNB Chain is already<br>amplifying our ecosystem —<br><span class="ac">let's give them a reason to amplify us</span></div>
+  <p class="page-lead">BNB Chain actively co-promotes campaigns from partners in their ecosystem. Wallet V is already deployed on BNB Chain with a live Aster DEX integration. The infrastructure is in place — what's missing is the BD conversation.</p>
+</div>
+
+<div class="content">
+
+  <!-- EVIDENCE 1 + 2 -->
+  <div class="slabel">What BNB Chain already does for ecosystem partners</div>
+  <div class="evidence-pair">
+    <div class="tweet-frame">
+      <img class="tweet-img" src="bnb-aster-repost.png" alt="BNB Chain retweeting Aster DEX $100K campaign">
+      <div class="tweet-caption">
+        <div class="tc-label bnb">BNB Chain × Aster DEX</div>
+        <div class="tc-text"><strong>25K impressions</strong> from a single BNB Chain repost of Aster's $100K $SPCXB Trade Arena. BNB Chain amplified this to their entire audience with zero cost to Aster — just because Aster is a BNB Chain ecosystem partner.</div>
+        <a class="tc-link" href="https://x.com/BNBCHAIN/status/2067573681912766479?s=20" target="_blank">View post → x.com/BNBCHAIN</a>
+      </div>
+    </div>
+    <div class="tweet-frame">
+      <img class="tweet-img" src="bnb-0fee.png" alt="BNB Chain 0 Fee Carnival campaign">
+      <div class="tweet-caption">
+        <div class="tc-label bnb">BNB Chain 0 Fee Carnival</div>
+        <div class="tc-text">BNB Chain runs its own zero-fee campaigns to drive on-chain activity — <strong>0 fee transactions for USDC, USD1 and U</strong>. These mechanics are designed to pull users onto BNB Chain and reward ecosystem partners who build on top of them.</div>
+        <a class="tc-link" href="https://x.com/BNBCHAIN/status/2068753432450941439?s=20" target="_blank">View post → x.com/BNBCHAIN</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- EVIDENCE 3 — CURRENT WALLET V CAMPAIGN -->
+  <div class="slabel">Where Wallet V is today</div>
+  <div class="evidence-single">
+    <div class="tweet-frame">
+      <img class="tweet-img" src="walletv-aster-campaign.png" alt="Wallet V × Aster $10,000 ASTER campaign">
+      <div class="tweet-caption">
+        <div class="tc-label walletv">Wallet V × Aster — live right now</div>
+        <div class="tc-text">Wallet V already has a live $10,000+ ASTER trading competition with Aster DEX, running June 14 – July 15, 2026. <strong>641K impressions from Wallet V's own account alone.</strong> But BNB Chain — which actively amplifies Aster campaigns — has not been looped in as a co-promoter.</div>
+        <a class="tc-link" href="https://x.com/WalletV_io/status/2066559717808255406?s=20" target="_blank">View post → x.com/WalletV_io</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- THE GAP -->
+  <div class="gap-box">
+    <div class="gap-icon">⚠️</div>
+    <div class="gap-text"><strong>The gap:</strong> BNB Chain retweeted Aster's $100K campaign to 25K impressions. Wallet V's $10K campaign with the same Aster DEX has been running for over a week without BNB Chain amplification. We are leaving distribution on the table from a partner who is already primed to help.</div>
+  </div>
+
+  <!-- INSIGHT -->
+  <div class="insight">
+    <p>BNB Chain's co-promotion playbook is well-established — they amplify campaigns that drive activity on their chain. <strong>A structured joint campaign gives BNB Chain a reason to push Wallet V to their full audience,</strong> the same way they did for Aster's $100K Trade Arena. The key is designing a mechanic that benefits all three parties: Wallet V, Aster DEX, and BNB Chain.</p>
+  </div>
+
+  <!-- PROPOSAL -->
+  <div class="slabel">Proposed campaign mechanic</div>
+  <div class="proposal-box">
+    <div class="pb-title">⚡ Wallet V × Aster × BNB Chain — Triple Co-Campaign</div>
+    <div class="mechanic-steps">
+      <div class="ms"><div class="ms-num">1</div><div class="ms-text"><strong>0 fee bridge to BNB Chain via Wallet V</strong> — mirrors BNB Chain's own 0 Fee Carnival mechanic, giving them a direct reason to co-promote and fund the incentive</div></div>
+      <div class="ms"><div class="ms-num">2</div><div class="ms-text"><strong>Trade $SPCXB on Aster DEX using a Wallet V AI agent</strong> — plugs directly into the existing $100K $SPCXB Trade Arena that BNB Chain already amplified</div></div>
+      <div class="ms"><div class="ms-num">3</div><div class="ms-text"><strong>Win from an extra $10,000+ reward pool</strong> — co-branded and co-funded with BNB Chain, on top of the existing Wallet V × Aster rewards. BNB Chain contributes rewards; we contribute the AI trading infrastructure and the campaign</div></div>
+    </div>
+  </div>
+
+  <!-- WIN WIN WIN -->
+  <div class="slabel">Why all three parties say yes</div>
+  <div class="win-grid">
+    <div class="win-card">
+      <div class="win-logo">🟡</div>
+      <div class="win-name">BNB Chain wins</div>
+      <div class="win-benefit">More on-chain activity, more BNB bridged, a new AI trading use case to showcase to their ecosystem. <strong>They already fund these campaigns — this fits their playbook exactly.</strong></div>
+    </div>
+    <div class="win-card">
+      <div class="win-logo">⬟</div>
+      <div class="win-name">Aster DEX wins</div>
+      <div class="win-benefit">More trading volume on $SPCXB, more AI agent activity on their platform, and co-promotion from both Wallet V and BNB Chain simultaneously. <strong>Three audiences for the price of one campaign.</strong></div>
+    </div>
+    <div class="win-card">
+      <div class="win-logo" style="color:var(--purple3)">V</div>
+      <div class="win-name">Wallet V wins</div>
+      <div class="win-benefit">BNB Chain's audience amplification — the same reach that drove 25K impressions for Aster — pointed at a Wallet V campaign. <strong>Zero media spend, maximum distribution.</strong></div>
+    </div>
+  </div>
+
+  <!-- BOTTOM NOTE -->
+  <div class="bottom-note">
+    <strong>The ask is a BD conversation, not a product build.</strong> Every integration needed for this campaign already exists — Wallet V on BNB Chain, Aster DEX inside Wallet V, AI agent trading live. This is purely about reaching the right person at BNB Chain's ecosystem team and structuring the co-promotion agreement. The fastest path: engage @BNBCHAIN on the existing Wallet V × Aster campaign thread and open the conversation from there.
+  </div>
+
+</div>
+</body>
+</html>
